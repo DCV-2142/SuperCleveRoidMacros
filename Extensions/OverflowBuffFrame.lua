@@ -441,7 +441,7 @@ RebuildFrame = function()
     if enabled then
         local pBuffs = GetPlayerOverflowBuffs()
         lastPlayerCount = PopulateFrame(playerFrame, playerLabelFs,
-            "SuperCleveRoid Overflow Buffs (You) *shift+drag*", playerIcons, pBuffs)
+            testMode and "SuperCleveRoid Overflow Buffs (You) *shift+drag*" or "", playerIcons, pBuffs)
     else
         playerFrame:Hide()
         playerFrame:EnableMouse(false)
@@ -457,7 +457,7 @@ RebuildFrame = function()
     if enabled then
         local tBuffs = GetTargetOverflowBuffs()
         local targetName = UnitExists("target") and UnitName("target") or "Target"
-        lastTargetCount = PopulateFrame(targetFrame, targetLabelFs, "SuperCleveRoid Overflow Buffs (" .. targetName .. ") *shift+drag*", targetIcons, tBuffs)
+        lastTargetCount = PopulateFrame(targetFrame, targetLabelFs, testMode and ("SuperCleveRoid Overflow Buffs (" .. targetName .. ") *shift+drag*") or "", targetIcons, tBuffs)
     else
         targetFrame:Hide()
         targetFrame:EnableMouse(false)
