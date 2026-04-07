@@ -7331,6 +7331,24 @@ CleveRoids.Keywords = {
         return IsResting() == nil
     end,
 
+    bg = function()
+        for i = 1, MAX_BATTLEFIELD_QUEUES do
+            if GetBattlefieldStatus(i) == "active" then
+                return true
+            end
+        end
+        return false
+    end,
+
+    nobg = function()
+        for i = 1, MAX_BATTLEFIELD_QUEUES do
+            if GetBattlefieldStatus(i) == "active" then
+                return false
+            end
+        end
+        return true
+    end,
+
     stat = function(conditionals)
         return Multi(conditionals.stat, function(args)
             if type(args) ~= "table" or not args.name then
