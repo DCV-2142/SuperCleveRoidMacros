@@ -1542,8 +1542,12 @@ lib.personalDebuffs = lib.personalDebuffs or {
   [11285] = 4,    -- Gouge (Rank 4)
   [11286] = 4,    -- Gouge (Rank 5)
 
-  -- NOTE: Rupture removed - handled by ComboPointTracker (base 8s + 2s per CP)
-  -- NOTE: Kidney Shot removed - handled by ComboPointTracker (base 1s/2s + 1s per CP)
+  [1943] = 8,     -- Rupture Rank 1
+  [8639] = 8,     -- Rupture Rank 2
+  [8640] = 8,     -- Rupture Rank 3
+  [11273] = 8,    -- Rupture Rank 4
+  [11274] = 8,    -- Rupture Rank 5
+  [11275] = 8,    -- Rupture Rank 6
 
   [703] = 18,     -- Garrote (Rank 1)
   [8631] = 18,    -- Garrote (Rank 2)

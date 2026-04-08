@@ -150,6 +150,8 @@ local BOOLEAN_CONDITIONALS = {
     stopattack = true,
     pet = true,
     nopet = true,
+    bg = true,
+    nobg = true,
 }
 
 local requirementCheckFrame = CreateFrame("Frame")
